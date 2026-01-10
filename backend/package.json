@@ -1,0 +1,12 @@
+{
+  "name": "portfolio-backend",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:email": "cd email-service && npm install",
+    "start:email": "node email-service/index.js",
+    "start:email:dev": "cd email-service && nodemon index.js",
+    "start:api": "uvicorn server:app --reload --port 8000",
+    "start": "echo \"To run the backend: 1) Start the API: install Python deps (pip install -r requirements.txt) and run 'npm run start:api' (requires uvicorn). 2) Start email service: 'npm run start:email' (from backend dir). Open two terminals and run both commands.\""
+  }
+}
