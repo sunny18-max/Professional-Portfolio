@@ -23,12 +23,12 @@ const Hero = () => {
   }, [])
 
   return (
-    <section id="hero" ref={heroRef} className="min-h-screen flex items-center justify-center relative overflow-hidden">      {/* Subtle gradient orb */}
-      <div className="absolute top-1/4 -right-1/4 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-1/4 -left-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
+    <section id="hero" ref={heroRef} className="min-h-[100svh] sm:min-h-screen flex items-start sm:items-center justify-center relative overflow-x-hidden">      {/* Subtle gradient orb */}
+      <div className="absolute top-1/4 -right-1/4 w-[320px] h-[320px] sm:w-[520px] sm:h-[520px] lg:w-[600px] lg:h-[600px] bg-emerald-500/10 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-1/4 -left-1/4 w-[260px] h-[260px] sm:w-[360px] sm:h-[360px] lg:w-[400px] lg:h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-32 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12 sm:py-28 lg:py-32 w-full">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
           <div className="max-w-4xl">
             {/* Greeting */}
             <motion.p
@@ -45,7 +45,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-white mb-6 hero-reveal"
+              className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-light tracking-tight text-white mb-5 sm:mb-6 hero-reveal"
             >
               {personalInfo.name}
             </motion.h1>
@@ -55,7 +55,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="text-xl md:text-2xl lg:text-3xl font-light text-white/70 mb-8 hero-reveal"
+              className="text-base sm:text-xl md:text-2xl lg:text-3xl font-light text-white/70 mb-6 sm:mb-8 hero-reveal"
             >
               {personalInfo.title}
             </motion.h2>
@@ -65,7 +65,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="text-base md:text-lg text-white/40 max-w-2xl mb-12 leading-relaxed hero-reveal"
+              className="text-sm sm:text-base md:text-lg text-white/40 max-w-2xl mb-10 sm:mb-12 leading-relaxed hero-reveal"
             >
               {personalInfo.tagline}
             </motion.p>
@@ -75,11 +75,11 @@ const Hero = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
-              className="flex flex-wrap gap-4 mb-16 hero-reveal"
+              className="flex flex-wrap gap-3 sm:gap-4 mb-10 sm:mb-16 hero-reveal"
             >
               <motion.a
                 href="#projects"
-                className="px-8 py-4 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-200"
+                className="px-6 sm:px-8 py-3 sm:py-4 bg-white text-black text-sm font-medium rounded-full hover:bg-white/90 transition-all duration-200"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={(e) => {
@@ -91,7 +91,7 @@ const Hero = () => {
               </motion.a>
               <motion.a
                 href="#contact"
-                className="px-8 py-4 border border-white/20 text-white text-sm font-medium rounded-full hover:bg-white/5 transition-all duration-200"
+                className="px-6 sm:px-8 py-3 sm:py-4 border border-white/20 text-white text-sm font-medium rounded-full hover:bg-white/5 transition-all duration-200"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 onClick={(e) => {
@@ -108,7 +108,7 @@ const Hero = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.6, delay: 0.8 }}
-              className="flex items-center gap-6 hero-reveal"
+              className="flex items-center gap-4 sm:gap-6 hero-reveal"
             >
               {socialIcons.map((social, index) => (
                 <motion.a
@@ -128,7 +128,7 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          <div className="hero-photo hero-reveal w-full max-w-sm mx-auto">
+          <div className="hero-photo hero-reveal w-full max-w-xs sm:max-w-sm lg:max-w-md mx-auto lg:mx-0 lg:justify-self-end mt-10 lg:mt-0">
             <div className="photo-frame">
               <picture>
                 <source srcSet="/images/profile.jpg" type="image/jpeg" />
@@ -144,7 +144,7 @@ const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2"
+        className="hidden sm:block absolute bottom-8 left-1/2 -translate-x-1/2"
       >
         <motion.div
           animate={{ y: [0, 8, 0] }}

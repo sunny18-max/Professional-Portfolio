@@ -13,8 +13,8 @@ const About = () => {
   const highlightIcons = [Code2, Sparkles, Rocket, Users];
 
   return (
-    <section id="about" className="py-32 relative" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="about" className="py-20 sm:py-28 lg:py-32 relative" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -28,7 +28,7 @@ const About = () => {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16">
           {/* Bio Text */}
           <motion.div
             initial={{ opacity: 0, x: -30 }}

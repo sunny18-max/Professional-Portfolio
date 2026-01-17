@@ -11,8 +11,8 @@ const Education = () => {
   const items = experienceData.filter(e => e.type === 'education').map((e) => `${e.title} — ${e.organization} (${e.period})`)
 
   return (
-    <section id="education" className="py-24 relative" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+    <section id="education" className="py-20 sm:py-24 relative" ref={ref}>
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="mb-8">
           <p className="text-emerald-400 text-sm tracking-widest mb-2">EDUCATION</p>
           <h3 className="text-2xl md:text-3xl font-light text-white">Educational Background</h3>

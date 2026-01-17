@@ -74,8 +74,8 @@ export default function GitHubStats({ repos: reposProp }) {
   }
 
   return (
-    <section id="github" className="py-24">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="github" className="py-20 sm:py-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="mb-8">
           <p className="text-emerald-400 text-sm tracking-widest mb-4">GITHUB</p>
           <h2 className="text-3xl md:text-4xl font-light text-white">Open source activity & stats</h2>

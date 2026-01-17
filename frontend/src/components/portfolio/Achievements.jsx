@@ -46,8 +46,8 @@ const Achievements = () => {
   }
 
   return (
-    <section id="achievements" className="py-32 relative" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="achievements" className="py-20 sm:py-28 lg:py-32 relative" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="mb-12">
           <p className="text-emerald-400 text-sm tracking-widest mb-4">ACHIEVEMENTS</p>
           <h2 className="text-4xl md:text-5xl font-light text-white mb-6">Highlights & Achievements</h2>

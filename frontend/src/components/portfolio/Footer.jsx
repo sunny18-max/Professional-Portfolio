@@ -9,7 +9,7 @@ const Footer = () => {
 
   return (
     <footer className="py-12 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Copyright */}
           <motion.p
@@ -17,7 +17,7 @@ const Footer = () => {
             whileInView={{ opacity: 1 }}
             className="text-white/40 text-sm flex items-center gap-2"
           >
-            Built with <Heart size={14} className="text-red-400" /> by Saathvik Kalepu
+            Designed & built by Saathvik Kalepu
           </motion.p>
 
           {/* Year */}

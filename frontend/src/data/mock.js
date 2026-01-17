@@ -32,20 +32,35 @@ export const aboutData = {
 
 export const skillsData = {
   frontend: [
+    { name: "JavaScript", icon: "javascript" },
+    { name: "HTML5", icon: "html5" },
+    { name: "CSS3", icon: "css3" },
     { name: "React", icon: "react" },
+    { name: "Redux", icon: "redux" },
     { name: "Next.js", icon: "nextjs" },
     { name: "TypeScript", icon: "typescript" },
-    { name: "Tailwind CSS", icon: "tailwind" }
+    { name: "Tailwind CSS", icon: "tailwind" },
+    { name: "Framer Motion", icon: "framer" },
+    { name: "Vite", icon: "vite" }
   ],
   backend: [
     { name: "Node.js", icon: "nodejs" },
     { name: "Python", icon: "python" },
+    { name: "REST APIs", icon: "rest" },
     { name: "FastAPI", icon: "fastapi" },
-    { name: "Express", icon: "express" }
+    { name: "Express", icon: "express" },
+    { name: "GraphQL", icon: "graphql" },
+    { name: "PostgreSQL", icon: "postgresql" },
+    { name: "Redis", icon: "redis" }
   ],
   aiml: [
     { name: "TensorFlow", icon: "tensorflow" },
+    { name: "PyTorch", icon: "pytorch" },
+    { name: "Scikit-learn", icon: "scikitlearn" },
+    { name: "Pandas", icon: "pandas" },
+    { name: "NumPy", icon: "numpy" },
     { name: "OpenAI API", icon: "openai" },
+    { name: "Hugging Face", icon: "huggingface" },
     { name: "NLP", icon: "nlp" },
     { name: "Computer Vision", icon: "cv" }
   ],
@@ -53,7 +68,14 @@ export const skillsData = {
     { name: "MongoDB", icon: "mongodb" },
     { name: "PostgreSQL", icon: "postgresql" },
     { name: "Git", icon: "git" },
-    { name: "Docker", icon: "docker" }
+    { name: "GitHub", icon: "github" },
+    { name: "Docker", icon: "docker" },
+    { name: "Kubernetes", icon: "kubernetes" },
+    { name: "AWS", icon: "aws" },
+    { name: "Linux", icon: "linux" },
+    { name: "GitHub Actions", icon: "githubactions" },
+    { name: "Postman", icon: "postman" },
+    { name: "Vercel", icon: "vercel" }
   ]
 };
 

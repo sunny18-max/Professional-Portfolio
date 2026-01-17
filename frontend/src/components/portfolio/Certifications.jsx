@@ -13,7 +13,7 @@ const Certifications = () => {
 
   return (
     <section id="certifications" className="py-20 relative" ref={ref}>
-      <div className="max-w-5xl mx-auto px-6 lg:px-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.6 }} className="mb-8">
           <p className="text-emerald-400 text-sm tracking-widest mb-2">CERTIFICATIONS</p>
           <h3 className="text-2xl md:text-3xl font-light text-white">Certifications & Badges</h3>

@@ -45,7 +45,7 @@ const Navbar = () => {
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             {/* Logo */}
             <motion.a
@@ -100,7 +100,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            className="fixed inset-0 z-40 bg-[#0a0a0a] pt-24 px-6 md:hidden"
+            className="fixed inset-0 z-40 bg-[#0a0a0a] pt-24 px-4 sm:px-6 md:hidden overflow-y-auto"
           >
             <div className="flex flex-col gap-6">
               {navItems.map((item, index) => (

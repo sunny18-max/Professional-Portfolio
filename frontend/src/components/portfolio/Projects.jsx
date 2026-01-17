@@ -74,8 +74,8 @@ const Projects = () => {
   const [active, setActive] = React.useState(null)
 
   return (
-    <section id="projects" className="py-32 relative" ref={ref}>
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="projects" className="py-20 sm:py-28 lg:py-32 relative" ref={ref}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -84,13 +84,13 @@ const Projects = () => {
           className="mb-12"
         >
           <p className="text-emerald-400 text-sm tracking-widest mb-4">PORTFOLIO</p>
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between md:gap-6">
             <div>
               <h2 className="text-4xl md:text-5xl font-light text-white mb-2">Featured Projects</h2>
               <p className="text-white/50 text-lg max-w-2xl">A curated selection of projects showcasing my expertise in full-stack development and AI integration.</p>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
               <button onClick={()=>setLayout('grid')} className={`px-3 py-2 rounded-md ${layout==='grid' ? 'bg-white text-black' : 'bg-white/5 text-white/60'}`}>Grid</button>
               <button onClick={()=>setLayout('carousel')} className={`px-3 py-2 rounded-md ${layout==='carousel' ? 'bg-white text-black' : 'bg-white/5 text-white/60'}`}>Carousel</button>
               <button onClick={()=>setLayout('list')} className={`px-3 py-2 rounded-md ${layout==='list' ? 'bg-white text-black' : 'bg-white/5 text-white/60'}`}>List</button>
@@ -152,9 +152,9 @@ const Projects = () => {
         {layout === 'carousel' && (
           <div className="carousel-wrapper">
             {/* simple horizontal scroll fallback if embla not present */}
-            <div className="flex gap-6 overflow-x-auto py-4">
+            <div className="flex gap-4 sm:gap-6 overflow-x-auto py-4">
               {filteredProjects.map(p => (
-                <div key={p.id} onClick={()=>setActive(p)} className="min-w-[320px] p-6 bg-white/[0.02] border border-white/5 rounded-2xl cursor-pointer">
+                <div key={p.id} onClick={()=>setActive(p)} className="min-w-[260px] sm:min-w-[320px] p-5 sm:p-6 bg-white/[0.02] border border-white/5 rounded-2xl cursor-pointer">
                   <img src={p.image} alt={p.title} className="w-full h-40 object-cover rounded-md mb-4" />
                   <h3 className="text-white font-medium mb-2">{p.title}</h3>
                   <p className="text-white/50 text-sm line-clamp-3">{p.description}</p>
@@ -167,8 +167,8 @@ const Projects = () => {
         {layout === 'list' && (
           <div className="space-y-4">
             {filteredProjects.map(p => (
-              <div key={p.id} onClick={()=>setActive(p)} className="p-6 bg-white/[0.02] border border-white/5 rounded-2xl cursor-pointer flex items-start gap-6">
-                <img src={p.image} className="w-36 h-24 object-cover rounded-md" />
+              <div key={p.id} onClick={()=>setActive(p)} className="p-5 sm:p-6 bg-white/[0.02] border border-white/5 rounded-2xl cursor-pointer flex flex-col sm:flex-row sm:items-start gap-4 sm:gap-6">
+                <img src={p.image} className="w-full sm:w-36 h-44 sm:h-24 object-cover rounded-md" />
                 <div>
                   <h3 className="text-white font-medium mb-1">{p.title}</h3>
                   <p className="text-white/50 text-sm line-clamp-2">{p.description}</p>
@@ -182,10 +182,10 @@ const Projects = () => {
         {/* Project modal / inspector */}
         <AnimatePresence>
           {active && (
-            <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-6">
-              <motion.div initial={{ y:20 }} animate={{ y:0 }} exit={{ y:20 }} className="max-w-3xl w-full bg-[#071023] rounded-2xl p-6">
-                <div className="flex items-start gap-6">
-                  <img src={active.image} className="w-44 h-32 object-cover rounded-md shrink-0" />
+            <motion.div initial={{ opacity:0 }} animate={{ opacity:1 }} exit={{ opacity:0 }} className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 sm:p-6">
+              <motion.div initial={{ y:20 }} animate={{ y:0 }} exit={{ y:20 }} className="max-w-3xl w-full bg-[#071023] rounded-2xl p-5 sm:p-6 max-h-[85vh] overflow-y-auto">
+                <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                  <img src={active.image} className="w-full sm:w-44 h-44 sm:h-32 object-cover rounded-md shrink-0" />
                   <div className="flex-1">
                     <h3 className="text-xl font-medium text-white">{active.title}</h3>
                     <p className="text-white/50 mt-2">{active.description}</p>

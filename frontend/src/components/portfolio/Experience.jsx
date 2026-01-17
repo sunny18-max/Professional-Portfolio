@@ -17,11 +17,11 @@ const Experience = () => {
   
 
   return (
-    <section id="experience" className="py-32 relative" ref={ref}>
+    <section id="experience" className="py-20 sm:py-28 lg:py-32 relative" ref={ref}>
       {/* Background accent */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-white/[0.01] to-transparent pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
